@@ -6,7 +6,11 @@ validInput.addEventListener(`blur`, (event) => {
     validInput.value.length
   ) {
     validInput.classList.add(`valid`);
+    validInput.classList.remove(`invalid`);
 
     console.log(validInput.classList);
-  } else validInput.classList.add(`invalid`);
+  } else {
+    validInput.classList.add(`invalid`);
+validInput.classList.remove(`valid`);
+  }
 });
